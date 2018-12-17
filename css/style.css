@@ -17,8 +17,7 @@ html, header {
 .flex_container {
     width: 100%;
     display: flex;
-    justify-content: center;
-    /* align-items: center; */
+    justify-content: center;   
 }
 
 body {
@@ -176,13 +175,13 @@ div.slider figure img {
     height: 100%;
 }
 div.slider {
-    width: 100%;
+    width: 5000%;
     overflow: hidden;
     height: 100%;
 }
 @keyframes slidy {
-    0% { left:85%;}
-    20% { left: 85%;}
+    0% { left:120%;}
+    20% { left: 120%;}
     25% { left: 115%;}
     45% { left: 115%;}
     50% { left: 0%;}
