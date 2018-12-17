@@ -6,6 +6,10 @@
     box-sizing: border-box;
     margin: 0;
 }
+html, header {
+    height: 100%;
+    background: url(img-css/background.png);
+}
 #ici {
     color:white;
 }
@@ -14,40 +18,39 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    /* align-items: center; */
 }
 
-body.flex_container {
-    justify-content: space-between;
-    background: url(img-css/background.png);
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
 }
 
 /* ------------------------------------------------------------------- */
 /*                              HEADER                                 */
 /* ------------------------------------------------------------------- */
-header.header {
+header {
     position: fixed;
-    background: url(img-css/background.png);
-    height: 70px;
-    justify-content: space-between;
-    flex-direction: column;
+    height: 60px;
     z-index: 9999;
-    align-items: flex-end
+    flex-flow: column;
+    align-items: flex-end;
 }
-
+/* ------------------------------------------------------------------- */
+/*                            Logo/ Login                              */
+/* ------------------------------------------------------------------- */
+div.log {
+    width: 52%;
+    justify-content: space-between  
+}
+div.log  a {
+    width: 50px;
+    height: 50px;
+}
 div.log img {
     width: 100%;
-}
-
-div.log {
-    width: 58%;
-    flex-direction: row;
-    justify-content: space-between;
-}
-div.log a {
-    width: 50px;
-    height: 50px
 }
 
 /* ------------------------------------------------------------------- */
@@ -58,16 +61,13 @@ nav.flex_container {
     justify-content: space-around;
     flex-direction: row;
     box-shadow: 0 1px black;
-    z-index: 9999;
 }
-
 nav.flex_container a {
     text-decoration: none;
     color: #dfe906;
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 20px;
 }
-
 nav a:hover {
    color:white;
 }
@@ -80,39 +80,37 @@ section.flex_container {
     margin-top: 70px;
     flex-flow: row wrap;
     justify-content: space-around;
-    background: url(img-css/background.png); 
+    margin-bottom: 95px;
+     
 }
 
 article.flex_container {
     margin-top: 10px;
-    border: 1px 0.5px solid black;
-    width: 80% ;
-    height: 300px;
-}
-
-article.star {
-    justify-content: space-around;
-    height: 200px;
-    order: 10;
+    border: 2px 0.5px solid black;
+    width: 45% ;
+    height: 250px;
+    border-radius: 5px;
     box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
 }
 
+article.star {
+    justify-content: space-around;   
+}
+
 article.star img {
-    width: 20%;
+    margin: 5px;
+    width: 30%;
 }
 
 article.star p {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     color: #f0f0cf;
 }
 
-article.avenir {
-    order: 20;
+article.avenir { 
     flex-direction: column;
-    justify-content: space-around;
-    height: 200px;
-    box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
+    justify-content: space-around; 
 }
 
 div.av {
@@ -123,12 +121,15 @@ div.av {
     justify-content: center;
 }
 div.mois {
+    flex-flow: column;
     width: 100%;
+    flex-shrink: 1;
 }
 
 div.av img {
     width: 100%;
     height: 170px;
+    flex-shrink: 1;
 }
 
 div.av img:hover {
@@ -139,7 +140,7 @@ h2 {
     text-transform: capitalize;
     color: #dfe906;
     text-align: center;
-    font-size: 15px
+    font-size: 20px
 }
 
 article.avenir p {
@@ -154,42 +155,34 @@ div.av p:hover {
 }
 
 article.site {
-    justify-content: space-around;
-    width: 80%;
-    height: 200px;
-    order: 30;
-    box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 article.site img {
-    width: 80%;
-    height: 160px
+    margin: auto;
+    width: 90%;
+    height: 80%;
 }
 
 
 /* ------------------------------------------------------------------- */
 /*                            CARROUSEL                                */
 /* ------------------------------------------------------------------- */
-article.carrousel1 {
-    margin-bottom: 10px;
-    width: 80%;
-    height: 155px;
-    order: 40;
-    box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
-}
-article.slider figure img {
+
+div.slider figure img {
     width: 100%;
-    height: 150px;
+    height: 100%;
 }
-article.slider {
-    width: 90%;
+div.slider {
+    width: 100%;
     overflow: hidden;
-    height: 150px;
-    padding-bottom: 20px;
+    height: 100%;
 }
 @keyframes slidy {
-    0% { left: 225%;}
-    20% { left: 225%;}
+    0% { left:85%;}
+    20% { left: 85%;}
     25% { left: 115%;}
     45% { left: 115%;}
     50% { left: 0%;}
@@ -199,9 +192,9 @@ article.slider {
     95% { left: -225%;}
     100% { left: -225%;}
 }
-article.slider figure {
+div.slider figure {
     position: relative;
-    width: 300px;
+    width: 100%;
     margin: 0;
     padding: 0;
     font-size: 0;
@@ -215,15 +208,19 @@ article.slider figure {
 /*                            PARTENAIRE                               */
 /* ------------------------------------------------------------------- */
 aside.partenaire {
+    position: absolute;
+    bottom: 50px;
     height: 35px;
-    align-items: stretch;
+    align-items: center;
     background-color: antiquewhite;
 }
-article.partenaire figure img {
+
+div.partenaire figure img {
     width: 30px;
     height: 30px;
 }
-article.partenaire {
+
+div.partenaire {
     margin: 0;
     flex-direction: row;
     align-items: flex-start;
@@ -231,12 +228,13 @@ article.partenaire {
     height: 30px;
     width: 100%;
 }
+
 @keyframes banniere {
     0% {left: -22%;}
     100% {left: 22%;}
 }
 
-article.partenaire figure {
+div.partenaire figure {
     position: relative;
     width: 100%;
     margin: 0;
@@ -255,12 +253,14 @@ footer.flex_container {
     flex-direction: row;
     justify-content: flex-start;
     background-color: #232322;
-    height: 100px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
 }
 
 div.contact {
+    justify-content: flex-start;
     height: 50px;
-    align-items: flex-start;
     flex-direction: column nowrap;
 }
 
@@ -290,10 +290,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media all and (min-width:800px) and (max-width:1600px) {
-    body.flex_container{ 
-        height: 800px;
-    }
+/* @media all and (min-width:800px) and (max-width:1600px) {
     section.galerie {        
         height: 750px;
     }
@@ -331,7 +328,7 @@ footer a:hover {
     div.photos {
         flex-direction: row;
         flex-wrap: wrap;
-        height: 460px;
+        height: 100%;
         align-items: flex-start;
     }
     div.movies {
@@ -341,14 +338,17 @@ footer a:hover {
         align-items: flex-start;
     }
     div.cote {
+        margin : 2px;
         width: 30%;
         height: 300px
     }
     #first {
+        margin : 2px;
         width: 67%;
         height: 300px;
     }
     div.photos img {
+        margin : 2px;
         width: 25%;
         height: 150px;
     }
@@ -509,98 +509,5 @@ footer a:hover {
     
     
     
-}
+} */
 
-@media all and (min-width:740px) and (max-width:800px) {
-    body.flex_container {
-        
-        justify-content: space-between;
-    }
-
-    div.log {
-        width: 53.70%;
-    }   
-    
-    section.flex_container {
-        height: 470px;
-    }
-    article.flex_container {
-        width: 47%;
-        height: 200px;
-    }
-
-    article.star img {
-        width: 20%;
-    }
-
-    article.star p {
-        font-size: 12px;
-    }
-
-    article.avenir {
-        justify-content: space-around;
-    }
-
-    article.avenir p {
-        font-size: 12px;
-    
-    }
-
-    article.avenir img {
-        width: 100%;
-    }
-
-    div.av {
-        justify-content: center;
-        align-content: center;
-    }
-
-    article.site {
-        margin-bottom: 10px;
-    }
-
-    article.site img {
-        width: 80%;
-        height: 150px;
-    }
-    
-    article.slider figure img {
-        width: 110%;
-        height: 180px;
-    }
-    article.slider {
-        width: 95%;
-        max-width: 475%;
-        overflow-x: hidden;
-        height: 180px;
-        order: 40;
-        padding: 0px;
-        margin-bottom: 10px;
-    
-    }
-    @keyframes slidy {
-        0% { left: 210%;}
-        20% { left: 210%;}
-        25% { left: 105%;}
-        45% { left: 105%;}
-        50% { left: 0%;}
-        70% { left: 0%;}
-        75% { left: -105%;}
-        95% { left: -105%;}
-        95% { left: -210%;}
-        100% { left: -210%;}
-    }
-    article.slider figure {
-        position: relative;
-        width: 95%;
-        height: 180px;
-        margin: 0;
-        padding: 0;
-        font-size: 0;
-        left: 0;
-        text-align: left;
-        flex-direction: row;
-        animation: 20s slidy linear infinite;
-        animation-timing-function: steps(1);
-    }
-}
