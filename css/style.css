@@ -6,10 +6,12 @@
     box-sizing: border-box;
     margin: 0;
 }
+
 html, header {
     height: 100%;
     background: url(img-css/background.png);
 }
+
 #ici {
     color:white;
 }
@@ -27,9 +29,16 @@ body {
     position: relative;
 }
 
+h2 {
+    text-transform: capitalize;
+    color: #dfe906;
+    text-align: center;
+    font-size: 20px
+}
 /* ------------------------------------------------------------------- */
 /*                              HEADER                                 */
 /* ------------------------------------------------------------------- */
+
 header {
     position: fixed;
     height: 60px;
@@ -37,17 +46,24 @@ header {
     flex-flow: column;
     align-items: flex-end;
 }
+
 /* ------------------------------------------------------------------- */
 /*                            Logo/ Login                              */
 /* ------------------------------------------------------------------- */
+
+/* div qui comptient le logo et login */
+
 div.log {
+    margin-top: 1%;
     width: 52%;
     justify-content: space-between  
 }
+
 div.log  a {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
+
 div.log img {
     width: 100%;
 }
@@ -55,33 +71,45 @@ div.log img {
 /* ------------------------------------------------------------------- */
 /*                             NAVIGATION                              */
 /* ------------------------------------------------------------------- */
+
 nav.flex_container {
     background: url(img-css/background.png);
     justify-content: space-around;
     flex-direction: row;
-    box-shadow: 0 1px black;
+    box-shadow: 0 1.6px black;
 }
+
+/* lien de la navigation */
+
 nav.flex_container a {
     text-decoration: none;
     color: #dfe906;
     text-transform: capitalize;
     font-size: 20px;
+    margin-bottom: 0.1%;
 }
+
+/* passage de la souris sur les liens de la nav */
+
 nav a:hover {
    color:white;
 }
 
-
 /* ------------------------------------------------------------------- */
 /*                    CORPS DE PAGE / ARTICLES                         */
 /* ------------------------------------------------------------------- */
+
+/* corps de page index */
+
 section.flex_container {
-    margin-top: 70px;
+    margin-top: 80px;
     flex-flow: row wrap;
     justify-content: space-around;
     margin-bottom: 95px;
      
 }
+
+/* Base article */
 
 article.flex_container {
     margin-top: 10px;
@@ -92,25 +120,41 @@ article.flex_container {
     box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
 }
 
+/* ------------------------------------------------------------------- */
+/* article sur la star a venir sur le prochain evenement */
+/* ------------------------------------------------------------------- */
+
 article.star {
-    justify-content: space-around;   
+    justify-content: space-around; 
+    align-items: center;  
 }
+
+/* photo de la stars */
 
 article.star img {
     margin: 5px;
-    width: 30%;
+    width: 130%;
 }
 
+/* texte de l'article sur la star */
+
 article.star p {
+    
     text-align: center;
     font-size: 14px;
     color: #f0f0cf;
 }
 
+/* ------------------------------------------------------------------- */
+/* article sur les trois prochains evenements a venir */
+/* ------------------------------------------------------------------- */
+
 article.avenir { 
     flex-direction: column;
     justify-content: space-around; 
 }
+
+/* div contenant les 3 trois evenements a venir */
 
 div.av {
     flex-direction: row;
@@ -119,45 +163,53 @@ div.av {
     overflow-y: hidden;
     justify-content: center;
 }
-div.mois {
+
+/* div evenement a venir */
+
+div.evenement {
     flex-flow: column;
     width: 100%;
     flex-shrink: 1;
 }
 
-div.av img {
+/* image des evenements */
+
+div.evenement img {
     width: 100%;
     height: 170px;
     flex-shrink: 1;
 }
 
-div.av img:hover {
+/* passage de souris sur les evenements dans la page d'acceuil */
+
+div.evenement img:hover {
     order: 2;
 }
 
-h2 {
-    text-transform: capitalize;
-    color: #dfe906;
-    text-align: center;
-    font-size: 20px
-}
-
-article.avenir p {
-    height: 150px;
-    font-size: 12px;
-    color: #f0f0cf;
-    text-align: center;
-}
-
-div.av p:hover {
+div.evenement p:hover {
     order: -1;
 }
 
-article.site {
-    flex-direction: column;
-    justify-content: center;
+/* textes des evenements dans la page d'acceuil*/ 
+
+div.evenement p {
+    height: 150px;
+    font-size: 14px;
+    color: #f0f0cf;
+    text-align: center;
     
 }
+
+/* ------------------------------------------------------------------- */
+/* article sur le circuit */
+/* ------------------------------------------------------------------- */
+
+article.site {
+    flex-direction: column;
+    justify-content: center;   
+}
+
+/* image du circuit de Multicars event */
 
 article.site img {
     margin: auto;
@@ -165,32 +217,46 @@ article.site img {
     height: 80%;
 }
 
+/* ------------------------------------------------------------------- */
+/* article sur les photos de la galerie CARROUSEL en JS                               */
+/* ------------------------------------------------------------------- */
 
-/* ------------------------------------------------------------------- */
-/*                            CARROUSEL                                */
-/* ------------------------------------------------------------------- */
+article.carrousel1 {
+    align-items: center;
+}
+
+/* taille des images a defiléés */
 
 div.slider figure img {
     width: 100%;
     height: 100%;
 }
+
+/* div contenant les images */
+
 div.slider {
-    width: 5000%;
+    width: 50%;
     overflow: hidden;
-    height: 100%;
+    height: 95%;
 }
+
+/* animantion du defilements des images */
+
 @keyframes slidy {
-    0% { left:120%;}
-    20% { left: 120%;}
-    25% { left: 115%;}
-    45% { left: 115%;}
+    0% { left:200%;}
+    20% { left: 200%;}
+    25% { left: 100%;}
+    45% { left: 100%;}
     50% { left: 0%;}
     70% { left: 0%;}
-    75% { left: -115%;}
-    95% { left: -115%;}
-    95% { left: -225%;}
-    100% { left: -225%;}
+    75% { left: -100%;}
+    95% { left: -100%;}
+    95% { left: -200%;}
+    100% { left: -200%;}
 }
+
+/* div contenant les images liees avec l'animation */
+
 div.slider figure {
     position: relative;
     width: 100%;
@@ -200,12 +266,15 @@ div.slider figure {
     left: 0;
     text-align: left;
     flex-direction: row;
+    align-items: center;
     animation: 20s slidy infinite;
     animation-timing-function: steps(1);
 }
+
 /* ------------------------------------------------------------------- */
-/*                            PARTENAIRE                               */
+/*                            PARTENAIRE/Bandeau animé                               */
 /* ------------------------------------------------------------------- */
+
 aside.partenaire {
     position: absolute;
     bottom: 50px;
