@@ -90,7 +90,7 @@ nav.flex_container a {
     text-transform: capitalize;
     font-size: 20px;
     margin-bottom: 0.1%;
-    font-family: 'Playfair Display' 
+    font-family: 'Kelly Slab';
 }
 
 /* passage de la souris sur les liens de la nav */
@@ -106,7 +106,7 @@ nav a:hover {
 /* corps de page index */
 
 section.index {
-    margin-top: 80px;
+    margin-top: 90px;
     flex-flow: row wrap;
     justify-content: space-around;
     margin-bottom: 95px;
@@ -323,6 +323,7 @@ div.partenaire figure {
 section.galerie {
     margin-top: 90px;
     margin-bottom: 50px; 
+    
 }
 div.images {
     width:50%;
@@ -357,7 +358,6 @@ div.filtre input {
     margin-left: 2px;
 }
 div.photos {
-    
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -365,11 +365,12 @@ div.photos {
     align-items: flex-start;
 }
 div.movies {
-    
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 50px;
+    height: 100%;
     align-items: flex-start;
+    
 }
 div.cote {
     flex-flow: column;
@@ -382,6 +383,10 @@ div.cote {
     width: 67%;
     height: 300px;
 }
+video#first {
+    width: 95%;
+    height: 50%;
+}
 div.photos img {
     margin : 2px;
     width: 24%;
@@ -392,9 +397,14 @@ div.cote img {
 }
 div.videos {
     width:50%;
-    height: 100%;
+    min-height: 100%;
     justify-content: flex-start;
     flex-flow: column; 
+}
+div.movies video{
+    margin: 2%;
+    width: 45%;
+    height: 300px;
 }
 /* ------------------------------------------------------------------- */
 /*                            FOOTER                                */
