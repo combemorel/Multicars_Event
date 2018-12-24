@@ -2,6 +2,8 @@
 /*                       CSS - Multicarsevent                          */
 /* ------------------------------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css?family=Charm|Kelly+Slab|Playfair+Display');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,6 +32,7 @@ body {
 }
 
 h2 {
+    font-family: 'Kelly Slab';
     text-transform: capitalize;
     color: #dfe906;
     text-align: center;
@@ -41,7 +44,7 @@ h2 {
 
 header {
     position: fixed;
-    height: 60px;
+    height: 80px;
     z-index: 9999;
     flex-flow: column;
     align-items: flex-end;
@@ -87,6 +90,7 @@ nav.flex_container a {
     text-transform: capitalize;
     font-size: 20px;
     margin-bottom: 0.1%;
+    font-family: 'Playfair Display' 
 }
 
 /* passage de la souris sur les liens de la nav */
@@ -101,12 +105,11 @@ nav a:hover {
 
 /* corps de page index */
 
-section.flex_container {
+section.index {
     margin-top: 80px;
     flex-flow: row wrap;
     justify-content: space-around;
     margin-bottom: 95px;
-     
 }
 
 /* Base article */
@@ -313,9 +316,90 @@ div.partenaire figure {
     flex-direction: row;
     animation: 10s banniere alternate infinite;
 }
+
+/* ------------------------------------------------------------------- */
+/*                            Page Galerie                             */
+/* ------------------------------------------------------------------- */
+section.galerie {
+    margin-top: 90px;
+    margin-bottom: 50px; 
+}
+div.images {
+    width:50%;
+    min-height: 100%;
+    flex-flow: column;
+    justify-content: flex-start;
+    border-right: solid 1px black;
+}
+div.images h2 {
+    font-size: 25px;
+}
+div.videos h2 {
+    font-size: 25px;
+}
+div.filtre {
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    justify-content: flex-start
+}
+div.filtre h3 {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: antiquewhite;
+    
+}
+div.filtre label {
+    color: antiquewhite;
+}
+div.filtre input {
+    margin-right: 10px;
+    margin-left: 2px;
+}
+div.photos {
+    
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: flex-start;
+}
+div.movies {
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    align-items: flex-start;
+}
+div.cote {
+    flex-flow: column;
+    margin : 2px;
+    width: 30%;
+    height: 300px
+}
+#first {
+    margin : 2px;
+    width: 67%;
+    height: 300px;
+}
+div.photos img {
+    margin : 2px;
+    width: 24%;
+    height: 150px;
+}
+div.cote img {
+    width: 100%
+}
+div.videos {
+    width:50%;
+    height: 100%;
+    justify-content: flex-start;
+    flex-flow: column; 
+}
 /* ------------------------------------------------------------------- */
 /*                            FOOTER                                */
 /* ------------------------------------------------------------------- */
+
 footer.flex_container {
     border-top: 2px solid black;
     flex-direction: row;
