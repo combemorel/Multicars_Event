@@ -124,7 +124,7 @@ article.flex_container {
 }
 
 /* ------------------------------------------------------------------- */
-/* article sur la star a venir sur le prochain evenement */
+/*           article sur la star a venir sur le prochain evenement     */
 /* ------------------------------------------------------------------- */
 
 article.star {
@@ -149,7 +149,7 @@ article.star p {
 }
 
 /* ------------------------------------------------------------------- */
-/* article sur les trois prochains evenements a venir */
+/*       article sur les trois prochains evenements a venir            */
 /* ------------------------------------------------------------------- */
 
 article.avenir { 
@@ -205,16 +205,13 @@ div.evenement p {
 }
 
 /* ------------------------------------------------------------------- */
-/* article sur le circuit */
+/*                       article sur le circuit                        */
 /* ------------------------------------------------------------------- */
 
 article.site {
     flex-direction: column;
     justify-content: center;   
 }
-
-/* image du circuit de Multicars event */
-
 article.site img {
     margin: auto;
     width: 90%;
@@ -222,7 +219,7 @@ article.site img {
 }
 
 /* ------------------------------------------------------------------- */
-/* article sur les photos de la galerie CARROUSEL en JS                               */
+/* article sur les photos de la galerie CARROUSEL en JS                */
 /* ------------------------------------------------------------------- */
 
 article.carrousel1 {
@@ -276,7 +273,7 @@ div.slider figure {
 }
 
 /* ------------------------------------------------------------------- */
-/*                            PARTENAIRE/Bandeau animé                               */
+/*                    PARTENAIRE/Bandeau animé                         */
 /* ------------------------------------------------------------------- */
 
 aside.partenaire {
@@ -422,7 +419,7 @@ section.message {
 
 section.message h1 {
     margin-top: 2%;
-    font-size: 40px
+    font-size: 40px;
 }
 section.message p {
     margin-top: 1%;
@@ -443,8 +440,49 @@ section.message input {
 section.message button {
     margin-top: 1%;
 }
+
 /* ------------------------------------------------------------------- */
-/*                            FOOTER                                */
+/*                            Page Connexion                           */
+/* ------------------------------------------------------------------- */
+div.id {
+    margin-top: 90px;
+    min-height: 500px;
+    margin-bottom: 50px;
+}
+
+section.inscription, .connexion {
+    border: solid #dfe906 2px;
+    width: 45%;
+    margin : 5%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.id form{
+    flex-direction: column;
+    width: 50%;
+    min-height: 90%;
+    text-align: center;
+}
+
+div.id input{
+    margin: 3%
+}
+
+div.id button{
+    width: 30%;
+    margin-bottom: 10%;
+}
+
+div.id h2 {
+    font-size: 25px;
+}
+
+
+
+/* ------------------------------------------------------------------- */
+/*                            FOOTER                                   */
 /* ------------------------------------------------------------------- */
 
 footer.flex_container {
@@ -489,224 +527,4 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* @media all and (min-width:800px) and (max-width:1600px) {
-    section.galerie {        
-        height: 750px;
-    }
-    div.images {
-        width:50%;
-        height: 601px;
-        justify-content: flex-start;
-        border-right: solid 1px black;
-    }
-    div.images h2 {
-        font-size: 25px;
-    }
-    div.videos h2 {
-        font-size: 25px;
-    }
-    div.filtre {
-        width: 100%;
-        height: 40px;
-        flex-direction: row;
-        justify-content: flex-start
-    }
-    div.filtre h3 {
-        margin-left: 10px;
-        margin-right: 10px;
-        color: antiquewhite;
-        
-    }
-    div.filtre label {
-        color: antiquewhite;
-    }
-    div.filtre input {
-        margin-right: 10px;
-        margin-left: 2px;
-    }
-    div.photos {
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: 100%;
-        align-items: flex-start;
-    }
-    div.movies {
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: 50px;
-        align-items: flex-start;
-    }
-    div.cote {
-        margin : 2px;
-        width: 30%;
-        height: 300px
-    }
-    #first {
-        margin : 2px;
-        width: 67%;
-        height: 300px;
-    }
-    div.photos img {
-        margin : 2px;
-        width: 25%;
-        height: 150px;
-    }
-    div.cote img {
-        width: 100%
-    }
-    div.videos {
-        width:50%;
-        height: 100%;
-        justify-content: flex-start; 
-    }
-    div.log {
-        width: 52.5%;
-        justify-content: space-between;        
-    }
-    div.log a {
-        width: 70px;
-        height: 70px;
-    }
-    div.log a:last-child {
-        width: 5%;
-        height: 45px;
-        margin-right: 10px;
-        margin-top: 10px;
-        
-    }
-    
-    nav.flex_container a {
-    font-size: 25px;
-    margin-bottom: 10px
-}
-
-    section.flex_container { 
-        height: 600px;
-    }
-    article.flex_container {
-        width: 45%
-    }
-    article.star {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    article.star img {
-        width: 23%;
-        margin-left: 6px;
-    }
-    article.star p {
-        font-size: 15px;
-    }
-    article.avenir {
-        justify-content: space-around;
-    }
-    article.avenir h2 {
-        font-size: 20px;
-    }
-
-    article.avenir p {
-        font-size: 15px;    
-    }
-
-    article.avenir img {
-        width: 100%;
-        height: 170px
-    }
-
-    div.av {
-        justify-content: center;
-        align-content: center;
-    }
-
-    article.site {
-        margin-bottom: 1px;
-    }
-    article.site h2 {
-        font-size: 20px;
-    }
-
-    article.site img {
-        width: 80%;
-        height: 180px;
-        margin-bottom: 5px;
-    }
-    article.carrousel1{
-        height: 200px;
-        margin-top: 16px;
-    }
-    article.slider figure img {
-        width: 100%;
-        height: 190px;
-    }
-    article.slider {
-        width: 80%;
-        max-width: 475%;
-        overflow-x: hidden;
-        height: 190px;
-        order: 40;
-        padding: 0px;
-        margin-bottom: 10px;
-    
-    }
-    @keyframes slidy {
-        0% { left: 200%;}
-        20% { left: 200%;}
-        25% { left: 100%;}
-        45% { left: 100%;}
-        50% { left: 0%;}
-        70% { left: 0%;}
-        75% { left: -100%;}
-        95% { left: -100%;}
-        95% { left: -200%;}
-        100% { left: -200%;}
-    }
-    article.slider figure {
-        position: relative;
-        width: 100%;
-        height: 180px;
-        margin: 0;
-        padding: 0;
-        font-size: 0;
-        left: 0;
-        text-align: left;
-        flex-direction: row;
-        animation: 20s slidy linear infinite;
-        animation-timing-function: steps(1);
-    }
-    footer.flex_container {
-    height: 60px;
-    order: 1000;
-        
-    }
-    section.message {
-        flex-direction: column;
-    }
-    section.message form {
-        display: flex;
-        justify-content: space-around;
-        width: 45%;
-        flex-direction: column;
-        align-items: center
-        
-    }
-    section.message input {
-        width: 50%;
-        margin: 10px;
-    }
-    section.message textarea {
-        width: 50%;
-        margin: 10px;
-    }
-    section.message h1 {
-        font-size: 30px;
-        color: antiquewhite
-    }
-    section.message p {
-        font-size: 20px;
-        color: antiquewhite
-    }
-    
-    
-    
-} */
 
