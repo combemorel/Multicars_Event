@@ -21,13 +21,31 @@
                 <a href="collection.html">collection</a>
             </nav>
         </header>
-        <section class="flex_container">
-        </section>
+        <div class="id flex_container">
+            <section class="inscription flex_container">
+                <h2>Inscription</h2>
+                <form method="POST" action="inscription.php" class="inscription flex_container">
+                    <input type="text" name="nom" placeholder="Votre Nom"/>
+                    <input type="text" name="prenom" placeholder="Votre Prénom"/>
+                    <input type="email" name="email" placeholder="Votre Adresse Email"/>
+                    <input type="password" name="password" placeholder="Votre Mot de Passe"/>
+                </form>
+                <button type="submit">Inscription</button>
+            </section>
+            <section class="connexion flex_container">
+                <h2>Connexion</h2>
+                <form method="POST" action="connexion.php" class="Connexion flex_container">
+                    <input type="email" name="email" placeholder="Votre Adresse Email" />
+                    <input type="password" name="password" placeholder="Votre Mot de Passe" />
+                </form>
+                <button type="submit">Connexion</button>
+            </section>
+        </div>
         <footer class="flex_container">
             <img src="img/logo.png" alt>
             <div class="contact flex_container">
                 <ul>
-                    <<li>Lieu-dit Tourdecircuit 35000 Rennes</li>
+                    <li>Lieu-dit Tourdecircuit 35000 Rennes</li>
                     <li>02.99.56.86.33</li>
                     <li><a href="contact.html">Contacter nous</a></li>
                     <li><a href="mentions_legales.html">Mentions légales</a></li>

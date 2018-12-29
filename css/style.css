@@ -11,7 +11,7 @@
 
 html, header {
     height: 100%;
-    background: url(img-css/background.png);
+    background: url(img_css/background.png);
 }
 
 #ici {
@@ -76,7 +76,7 @@ div.log img {
 /* ------------------------------------------------------------------- */
 
 nav.flex_container {
-    background: url(img-css/background.png);
+    background: url(img_css/background.png);
     justify-content: space-around;
     flex-direction: row;
     box-shadow: 0 1.6px black;
@@ -426,7 +426,7 @@ section.message p {
     color: antiquewhite;
 
 }
-section.message form{
+form.contact{
     flex-direction: column;
     align-items: center;
     margin-top: 2%;
