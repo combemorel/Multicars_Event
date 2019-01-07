@@ -492,8 +492,8 @@ article.mentions_legales {
     font-size: 20px;
     color: #f0f0cf
 }
-article.mentions_legales p {
-    
+article.mentions_legales h1 {
+    font-size: 40px;
 }
 /* ------------------------------------------------------------------- */
 /*                            FOOTER                                   */
